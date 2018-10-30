@@ -1,16 +1,23 @@
+function greeting(){
+    document.write("<br/>" + "Hellow world");
+}
+greeting.lang = "English";
+greeting();
+document.write("<br/>" + greeting.lang);
+
+
 const redFruits = ['strawberry', 'apple', 'cherry', 'cranberries'];
 function test(fruit, quantity) {
     
     //if (!fruit) throw('No fruits');
-    if (!fruit) document.write('No fruits');
-    if (!quantity) throw('No quantity');
+    if (!fruit) document.write("<br/>" + 'No fruits');
+    if (!quantity) throw("<br/>" + 'No quantity');
     if (redFruits.includes(fruit)) {
         document.write('red' + '<br/>');
     }
     if (quantity > 10) {
-        document.write('quantity' + '>=' + quantity);
+        document.write("<br/>" +  'quantity' + '>=' + quantity);
     }
-
 
 }
 test();

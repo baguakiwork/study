@@ -5,6 +5,31 @@ greeting.lang = "English";
 greeting();
 document.write("<br/>" + greeting.lang);
 
+const square = function(x) {
+    return x*x;
+}
+const qoob = square;
+
+document.write("<br/>" + square(8) + "   " +  qoob(5));
+
+function formalGreeting() {
+    document.write("<br/>" + "How are you?");
+}
+
+function casualGreeting() {
+    document.write("<br/>" + "What's up?");
+}
+
+function greet(type, formalGreeting, casualGreeting) {
+    if (type === 'formal') {
+        formalGreeting();
+    } else if (type === 'casual') {
+        casualGreeting();
+    }
+}
+
+greet('formal', formalGreeting, casualGreeting);
+
 
 const redFruits = ['strawberry', 'apple', 'cherry', 'cranberries'];
 function test(fruit, quantity) {

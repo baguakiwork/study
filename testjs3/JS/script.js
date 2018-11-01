@@ -20,6 +20,8 @@ arr1.forEach(logArrayElement);
 
 
 
+
+
 // function greeting(){
 //     document.write("<br/>" + "Hellow world");
 // }

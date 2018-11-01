@@ -19,11 +19,15 @@ for(let i = 0; i < arr1.length; i++) {
 }
 
 
-arr1.forEach(logArrayElement);
-arr1.forEach(DoubleArrayElement);
+// arr1.forEach(logArrayElement);
+// arr1.forEach(DoubleArrayElement);
+const arr3 = arr1.map(DoubleArrayElement);
+
 
 document.write("<br/>" + arr1 + "<br/>");
+document.write("<br/>" + arr3 + "<br/>");
 
+document.write("hello");
 
 
 

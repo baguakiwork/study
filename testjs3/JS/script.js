@@ -1,4 +1,4 @@
-const arr1 = [1,2,5 ,3];
+const arr1 = [1,2,5 ,10];
 const arr2 = [];
 
 function doubleArr(arr1) {
@@ -9,13 +9,20 @@ function logArrayElement(element, index, array){
     document.write('a[' + index + '] = ' + element  +  "<br/>");
 }
 
+function DoubleArrayElement(element, index, array){
+    return array[index] = element + element; 
+}
+
 
 for(let i = 0; i < arr1.length; i++) {
     arr2.push(arr1[i]*2); 
 }
 
-document.write("<br/>" + arr2 + "<br/>");
+
 arr1.forEach(logArrayElement);
+arr1.forEach(DoubleArrayElement);
+
+document.write("<br/>" + arr1 + "<br/>");
 
 
 

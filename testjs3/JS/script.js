@@ -14,6 +14,10 @@ document.write("<br/>", bar.a, "&nbsp", bar.b);
 document.write("<br/>", o1.a, "&nbsp", o1.b.slice(1,3));
 document.write("<br/>", o2.a, "&nbsp", o2.b.slice(1,3));
 
+let content1 = "CL";
+let content2 = "BD";
+console.log("some message %s and one more %s and object %o and number %d", content1, content2, o1, o1.a);
+console.log("I am a %cbutton", "color: white; margin: 10px; background-color: orange; padding: 2px 5px; border-radius: 3px");
 
 
 

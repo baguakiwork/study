@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+}
+
+p {
+    color: white;
+}
+
+.text {
+    text-transform: uppercase;
+}
+
+#main_text {
+    font-size: 24px;
+}
+
+ul li {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+ul > li {
+    color: #067bc2;
+}
+
+h1 + p {
+    color: green;
+    font-size: 20px;
+}
+
+a[href="stuff"] {
+    color: #ca3c25;
+}
+
+a:hover {
+    background-color: #067bc2;
+}
+
+a {
+    font-size: 24px;
+}
+
+.section {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.black {
+    background-color: #1b1b1e;
+}
+
+.peach {
+    background-color: #edcb96;
+}
+.pale{
+    background-color: #f3dad8;
+}
+
+.micado {
+    background-color: #ecc30b;
+}

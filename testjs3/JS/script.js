@@ -1,3 +1,26 @@
+const transactions = [{
+    id: "7cb1-e041b126-f3b8",
+    seller: "WAL0412",
+    buyer: "WAL3023",
+    price: 203450,
+    time: 1539688433
+  },
+  {
+    id: "1d4c-31f8f14b-1571",
+    seller: "WAL0452",
+    buyer: "WAL3023",
+    price: 348299,
+    time: 1539688433
+  },
+  {
+    id: "b12c-b3adf58f-809f",
+    seller: "WAL0012",
+    buyer: "WAL2025",
+    price: 59240,
+    time: 1539688433
+  }];
+
+
 const foo = {a:"abc"};
 const bar = foo;
 const o1 = {a:0, b:[1, 2, 3], c:2};
@@ -17,8 +40,10 @@ document.write("<br/>", o2.a, "&nbsp", o2.b.slice(1,3));
 let content1 = "CL";
 let content2 = "BD";
 console.log("some message %s and one more %s and object %o and number %d", content1, content2, o1, o1.a);
-console.log("I am a %cbutton", "color: white; margin: 10px; background-color: orange; padding: 2px 5px; border-radius: 3px");
-
+console.log("I am a %c button", "color: white; background-color: orange; padding: 2px 5px; border-radius: 3px");
+console.table(transactions, ["id", "price", "seller"]);
+console.table(o1);
+console.assert(o1.d, "object doesnt exist");
 
 
 // const input = new Uint8Array(1024*1024);

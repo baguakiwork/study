@@ -59,3 +59,30 @@ a {
 .micado {
     background-color: #ecc30b;
 }
+
+.red-text {
+    color: red;
+}
+
+.blue-text {
+    color: blue;
+}
+
+.green-text {
+    color: green;
+}
+
+.red-text, .blue-text, .green-text {
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.content-box {
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    padding: 20px;
+    border: 10px solid black;
+    background-color: #009688;
+}

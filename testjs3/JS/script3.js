@@ -141,6 +141,20 @@ function doub (el, ind) {
     return el*(ind+1);
 }
 
+function filt (el) {
+    return el > 10;
+}
+
+function acc(accumulator, currentV, currentI, array) {
+    return accumulator + currentV;
+}
+
 console.log(a.every(testing));
 
 console.log(a.map(doub));
+
+console.log(a.filter(filt));
+
+console.log(a.reduce(acc, 0));
+a.forEach(el => el*2);
+console.log(a);

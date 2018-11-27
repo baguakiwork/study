@@ -109,7 +109,7 @@ console.log(a4.length);
 function first() {
     console.log(33);
     setTimeout( function () {
-        console.log(1);}, 500
+        console.log(1);}, 100
     )
   
 }
@@ -158,3 +158,11 @@ console.log(a.filter(filt));
 console.log(a.reduce(acc, 0));
 a.forEach(el => el*2);
 console.log(a);
+
+for (let i of a) {
+    console.log(i);
+}
+
+for (let i = 0; i < a.length; i++) {
+    console.log(a[i]);
+}

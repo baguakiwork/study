@@ -131,7 +131,7 @@ second();
 
 // doHomework('Math', alertFinished);
 
-const a = [11, 12, 13];
+const a = [11, 12, 13, 14, 15, 16];
 const b = [5, 6, 25];
 const testing = (en, ind, arr) => {
     return en > 10 && ind < 5 && arr.length ==3 ;
@@ -166,3 +166,130 @@ for (let i of a) {
 for (let i = 0; i < a.length; i++) {
     console.log(a[i]);
 }
+
+
+a.push(17);
+a.unshift(9,10);
+
+let it = a[Symbol.iterator]();
+let it2 = a.entries();
+
+const c1 = a.concat(b);
+const c2 = [...a, ...b];
+console.log(c1, c2, c2.indexOf(11));
+console.log(c2.find(x => x > 10));
+console.log(c2.includes(11));
+
+const stc2 = c2.toString();
+const arrstc2 = stc2.split();
+
+console.log(stc2, arrstc2);
+
+for (let i = 0; i < c2.length; i++ ) {
+    console.log(i, c2[i]);
+};
+
+c2.forEach( (item, index) => {
+    console.log(item, index);
+}
+);
+
+// let i = 0;
+// do {
+//     console.log(c2[i]);
+//     i = i + 1;
+// } while(i < c2.length);
+
+const obj1 = {a:1, b:2, c:'three'};
+
+for (let prop in obj1) {
+    console.log(prop, obj1[prop]);
+    //console.log(obj1[prop]);
+}
+
+for (let value of [c2]) {
+    console.log(value);
+}
+
+for (const [index, value] of c2.entries()) {
+    console.log(index, value);
+}
+
+let obj2 = {value: 'message text', int: '1,2,3'};
+let notobj;
+let fn = (a) => [a.value, a.int];
+//console.log(fn(obj2));
+
+try {
+console.log(fn(notobj)); 
+} catch (e) {
+    console.log(e.message);
+} finally {
+    console.log(fn(obj2));
+}
+
+const car2 = {
+    maker: 'Ford',
+    model: 'Fiesta',
+    owner: 'Alex',
+    drive(own) {
+        this.owner = own; 
+        console.log(`The owner ${this.owner} Driving a ${this.maker} ${this.model} car!`);
+    }
+};
+const parking = function () {
+    console.log(`Parking ${this.maker} The owner ${this.owner}`);
+}.bind(car2)
+
+
+Object.defineProperty(car2, 'color', {
+    value: 'blue'
+    
+})
+
+
+car2.color = 'red';
+console.log(car2.color);
+car2.drive('Ivan');
+parking();
+
+
+const win = document.getElementById('win');
+win.addEventListener('click', function() {
+    alert(this);
+}.bind(this))
+
+const el2 = document.getElementById('el');
+el2.addEventListener('click', function() {
+    alert(this);
+}.bind(this))
+
+function doThis(){
+    const str = "button 2!";
+    console.log(str);
+    alert(str);
+}
+window.onload = () => {
+    alert("hi");
+}
+
+// function loadData(){
+//     const xhr = new XMLHttpRequest();
+//     const method = 'GET';
+//     const url = "https://jsonplaceholder.typicode.com/todos/1";
+//     xhr.open(method, url, true);
+//     xhr.onreadystatechange = function(){
+//         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status ===200){
+//             console.log(xhr.responseText)
+//         }
+//     }
+//     xhr.send();
+// }
+
+window.addEventListener('keydown', event => {
+    console.log(event.type, event.key);
+})
+
+window.addEventListener('mousedown', event => {
+    console.log(event.type, event.button, event.clientX, event.clientY);
+})

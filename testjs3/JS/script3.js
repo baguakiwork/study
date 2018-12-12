@@ -273,18 +273,18 @@ window.onload = () => {
     alert("hi");
 }
 
-// function loadData(){
-//     const xhr = new XMLHttpRequest();
-//     const method = 'GET';
-//     const url = "https://jsonplaceholder.typicode.com/todos/1";
-//     xhr.open(method, url, true);
-//     xhr.onreadystatechange = function(){
-//         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status ===200){
-//             console.log(xhr.responseText)
-//         }
-//     }
-//     xhr.send();
-// }
+function loadData(){
+    const xhr = new XMLHttpRequest();
+    const method = 'GET';
+    const url = "https://jsonplaceholder.typicode.com/todos/1";
+    xhr.open(method, url, true);
+    xhr.onreadystatechange = function(){
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status ===200){
+            console.log(xhr.responseText)
+        }
+    }
+    xhr.send();
+}
 
 window.addEventListener('keydown', event => {
     console.log(event.type, event.key);
@@ -293,3 +293,34 @@ window.addEventListener('keydown', event => {
 window.addEventListener('mousedown', event => {
     console.log(event.type, event.button, event.clientX, event.clientY);
 })
+
+const contDiv = document.getElementById('container');
+contDiv.addEventListener('click', event => {
+    console.log('container');
+})
+
+const chDiv = document.getElementById('child');
+chDiv.addEventListener('click', event => {
+    console.log('child');
+})
+
+window.addEventListener('click', event => {
+    console.log('window');
+})
+
+const tets1 = function(){
+    console.log("test 1")
+}
+const test2 = (name) => {
+    console.log(name, 'test 2')
+}
+tets1();
+test2("vasya");
+
+setTimeout( function() {
+    console.log(`Run 1`);
+    setTimeout( function(){
+        console.log(`run 2`);
+    }, 2000)
+}, 100)
+
